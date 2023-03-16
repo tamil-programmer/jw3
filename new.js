@@ -206,28 +206,23 @@ function f4a(params) {
 }
 
 function f4b(params) {
-    let copyText = `import java.util.Scanner;
-    public class pra4b
-    {
-    
-        public pra4b(){
-            System.out.println("Hello");
-        }
-    
-        public void finalize(){
-        System.out.println("Destroyed");
-        }
-    
-    
-    public static void main(String s[])
-    {
-    
-    pra4b s1 = new pra4b();
-    s1 = null;
-    System.gc();
-    
-    }
-    }
+    let copyText = `public class pract11
+{
+	public pract11()
+	{
+		System.out.println("Hello!!!");
+	}
+	public void finalize()
+	{
+		System.out.println("Destroyed!!!");
+	}
+	public static void main(String s[])
+	{
+		pract11 s1= new pract11();
+		s1=null;
+		System.gc();
+	}
+}
     `;
 
    
@@ -238,36 +233,36 @@ function f4b(params) {
 }
 
 function f4c(params) {
-    let copyText = `abstract class Calc{
+    let copyText = `import java.util.*;
+import java.lang.*;
+import java.io.*;
+{
+	public abstract int sqr(int n1);
+	public void show()
+	{
+		System.out.println("Hello");
+	}
+}
+	public class pract12 extends Calc
+	{
+		public int sqr(int n1)
+		{
+			return n1*n1;
+		}
+		public int cube(int n1)
+		{
+			return n1*n1*n1;
+		}
+		public static void main(String s[])
+		{
+			pract12 st=new pract12();
+			System.out.println(st.sqr(3));
+			System.out.println(st.cube(4));
+			st.show();
+		}
+	}
 
-        public abstract int sqr(int n1);
-        public abstract int cube(int n1);
-        public void show(){
-        System.out.println("hello");
-        }
-        }
-        
-        public class pra4c extends Calc{
-        
-        public int sqr(int n1){
-            return n1*n1;
-        }
-        
-        public int cube(int n1){
-            return n1*n1*n1;
-        }
-        
-        public static void main(String s[]){
-        
-            pra4c st = new pra4c();
-            System.out.println(st.sqr(3));
-            System.out.println(st.cube(4));
-            st.show();
-        }
-        
-        
-        }
-        
+ 
     `;
 
    
@@ -287,29 +282,28 @@ dvxdv
 
 
 function f5a(params) {
-    let copyText = `class Demo{
-
-        float pi=3.14;
-        void show(){
-            System.out.println("Area of Circle");
-        }
-    
-    }
-    
-    class pra5a extends Demo{
-        float r=2.0;
-        void area(){
-            System.out.println("pi*r*r");
-    }
-    public static void main(String s[]){
-    pra5a s1 = new pra5a();
-    s1.show();
-    s1.area();
-    
-    }
-        }
-    
-    `;
+    let copyText = `class Cic
+{
+	double pi=3.14;
+	void show()
+	{
+		System.out.println("Area of Circle:");
+	}
+}
+public class pract13 extends Cic
+{
+	double r=2.0;
+	void area()
+	{
+		System.out.println(pi*r*r);
+	}
+	public static void main(String s[])
+	{
+		pract13 p=new pract13();
+		p.show();
+		p.area();
+	}
+} `;
 
    
     // copyText.select();
